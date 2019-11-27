@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="/CSS/visitor.css">
+</head>
+<div class="overlay">
+        <div class="loader">Loading...</div>
+    </div>
+<body class="text-center">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h2>ADD CHECKOUT'S DETAILS</h2>
+        </div>
+    </div>
+    <div class="container border-primary">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Enter Ticket Number</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Default" id="ticketInp"
+                    aria-describedby="inputGroup-sizing-default" placeholder="Ticket Number" required />
+            </div>
+            <div class="alert alert-danger dispErr" style="display: none;"></div> 
+            <a href="/" class="btn btn-primary">Go Back?</a>
+            <button class="btn btn-primary" id="submitBtn">Checkout?</button>
+    </div>
+    <script src="/JS/jquery.min.js"></script>
+    <script src="/JS/bootstrap.min.js"></script>
+    <script src="/JS/checkout.js"></script>
+</body>
+
+</html>

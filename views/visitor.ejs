@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="/CSS/visitor.css">
+</head>
+<div class="overlay">
+        <div class="loader">Loading...</div>
+    </div>
+<body class="text-center">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h2>ENTER VISITOR'S DETAILS</h2>
+        </div>
+    </div>
+    <div class="container border-primary">
+        <!-- <form class="border" method=""> -->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Enter First Name</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default" placeholder="First Name" required />
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Enter Last Name</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default" placeholder="Last Name" required />
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Enter Email</span>
+                </div>
+                <input type="email" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default" pattern='/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/' title="Email format not correct" placeholder="Email" required />
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Enter Phone Number</span>
+                </div>
+                <input type="tel" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+                    placeholder="Phone Number" minlength="10" maxlength="10" required />
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Select Host</label>
+                </div>
+                <select class="custom-select form-control" id="inputGroupSelect01" required>
+                    <option value="0">Choose...</option>
+                    <% for(let host of hostArr){%>
+                    <option value=<%= host._id %>><%= host.name %></option>
+                     <%} %> 
+                </select> 
+            </div>
+            <div class="alert alert-danger dispErr" style="display: none;"></div> 
+            <a href="/" class="btn btn-primary">Go Back?</a>
+            <button class="btn btn-primary" id="submitBtn">Submit?</button>
+
+        <!-- </form> -->
+    </div>
+    <script src="/JS/jquery.min.js"></script>
+    <script src="/JS/bootstrap.min.js"></script>
+    <script src="/JS/visitor.js"></script>
+</body>
+
+</html>
